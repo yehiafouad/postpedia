@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.main-font {
+  font-family: "El messiri", sans-serif !important;
+}
+html[dir="ltr"] .main-font * {
+  font-family: "Poppins", sans-serif !important;
+}
+html[dir="rtl"] .main-font * {
+  font-family: "El messiri", sans-serif !important;
+}
+html[dir="ltr"] .main-font i {
+  font-family: "Icons" !important;
+}
+html[dir="rtl"] .main-font i {
+  font-family: "Icons" !important;
+}
+
+/* Custom Loader */
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.lds-hourglass:after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid rgb(46, 44, 44);
+  border-color: rgb(44, 43, 43) transparent rgb(133, 128, 128) transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+/* Animation Section */
+.animated {
+  background-color: teal;
+  transition: all 3s;
+}
+.noBackground {
+  background-color: white !important;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
