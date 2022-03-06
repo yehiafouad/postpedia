@@ -6,8 +6,8 @@ const LanguageContext = React.createContext();
 LanguageContext.displayName = "LanguageContext"; // react dev tools doesn't display the name of the context
 
 function LanguageProvider({ children }) {
-  const [direction, setDirection] = useLocalStorage("direction", "rtl");
-  const [language, setLocalStorageLanguage] = useLocalStorage("language", "ar");
+  const [direction, setDirection] = useLocalStorage("direction", "ltr");
+  const [language, setLocalStorageLanguage] = useLocalStorage("language", "en");
 
   React.useLayoutEffect(() => {
     document.getElementsByTagName("html")[0].setAttribute("dir", direction);
