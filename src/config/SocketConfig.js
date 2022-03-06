@@ -1,9 +1,9 @@
-import openSocket from 'socket.io-client'
+import openSocket from "socket.io-client";
 
 const socket = openSocket(
-  process.env.NODE_ENV !== 'production'
-    ? window.location.origin
-    : process.env.REACT_APP_SERVER_URL,
-)
+  process.env.NODE_ENV !== "production"
+    ? process.env.REACT_APP_DEV_URL
+    : process.env.REACT_APP_SERVER_URL
+);
 
-export default socket
+export default socket;
